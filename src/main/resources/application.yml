@@ -8,3 +8,6 @@ spring:
     show-sql: true
   session:
     store-type: none
+server:
+  context-path: /sell
+
