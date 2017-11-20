@@ -12,8 +12,8 @@ import java.math.BigDecimal;
  * Created by 伊逍 Senior on 2017/11/19.
  */
 @Entity
-@Data
 @DynamicUpdate
+@Data
 public class ProductInfo {
 
     @Id
