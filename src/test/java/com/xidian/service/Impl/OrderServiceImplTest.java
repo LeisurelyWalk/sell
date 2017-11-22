@@ -3,6 +3,7 @@ package com.xidian.service.Impl;
 import com.xidian.dataobject.OrderDetail;
 import com.xidian.dto.OrderDTO;
 import com.xidian.enums.OrderStatusEnum;
+import com.xidian.enums.PayStatusEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -78,6 +79,9 @@ public class OrderServiceImplTest {
 
     @Test
     public void paid() throws Exception {
+        OrderDTO orderDTO= orderService.findOne("123456");
+        orderDTO=orderService.paid(orderDTO);
+        Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(),orderDTO.getPayStatus());
     }
 
 }
